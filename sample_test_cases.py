@@ -24,7 +24,7 @@ class TestLab1(unittest.TestCase):
         tlist = [-10, -9, -1 ,-4, -9]
         self.assertEqual(sample.maxlist_rec(tlist),-1)
         tlist = []
-        with self.assertRaises(ValueError):  # uses context manager to check exception
+        with self.assertRaises(ValueError):  # check for correct Exception
             sample.maxlist_rec(tlist)
         self.assertRaises(ValueError, sample.maxlist_rec, tlist)  # another way to check exception
 

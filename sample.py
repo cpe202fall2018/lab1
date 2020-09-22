@@ -21,13 +21,16 @@ def maxlist_rec(tlist):   #returns max of a list of numbers
     elif (len(tlist) == 1):
         return tlist[0]
     else:
-        templist = tlist[1:len(tlist)]
+        templist = tlist[1:]
         temp = maxlist_rec(templist)
-        return (max(tlist[0],temp))
+        if tlist[0] > temp:
+            return tlist[0]
+        else:
+            return temp
 
 
 def reverse_iter(tempstring):
     newstring = ""
-    for i in range(len(tempstring)-1,-1,-1)  :
+    for i in range(len(tempstring)-1,-1,-1):
         newstring = newstring + tempstring[i]
     return newstring

@@ -10,6 +10,7 @@ class TestLocation(unittest.TestCase):
         str1 = "Location('SLO', 35.3, -120.7)"
         str2 = "Location(SLO, 35.3, -120.7)"
         res = repr(loc)
+        #print(res)
         self.assertTrue(res == str1 or res == str2)
     
     # Add more tests!
